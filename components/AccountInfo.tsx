@@ -184,6 +184,29 @@ export default function AccountInfo() {
               <Tooltip
                 content={
                   <div>
+                    Liquidation Price Estimate.{' '}
+                    <a
+                      href="liquidation link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Learn more
+                    </a>
+                  </div>
+                }
+              >
+                <div className="cursor-help font-normal text-th-fgd-3 leading-4 border-b border-th-fgd-3 border-dashed border-opacity-20 default-transition hover:border-th-bkg-2">
+                  Liquidation Price Estimate
+                </div>
+              </Tooltip>
+              <div className="text-th-fgd-1">
+                {isLoading ? <DataLoader /> : formatUsdValue(+equity)}
+              </div>
+            </div>
+            <div className={`flex justify-between pb-3`}>
+              <Tooltip
+                content={
+                  <div>
                     Earn MNGO by market making on Perp markets.{' '}
                     <a
                       href="https://docs.mango.markets/mango-v3/liquidity-incentives"
